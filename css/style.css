@@ -1,0 +1,278 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* css variables */
+:root {
+    --navbar-height: 59px
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Navigation bar: logo and image */
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 59px;
+    margin: 3px 6px;
+
+}
+
+/* Navigation bar: list styling */
+
+
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+
+}
+
+#navbar ul li a {
+    color: rgb(24, 170, 158);
+
+    display: flex;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#navbar ul li a:hover {
+    color: rgb(220, 209, 209);
+    background-color: #73abb6;
+}
+
+/* home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 670px;
+    padding: 3px 200px;
+    justify-content: center;
+    /* align-content: center; */
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    background: url('../photos/photos5.jpg') no-repeat center center/cover;
+
+    /* Photo by <a href="https://unsplash.com/de/@annemariehorne?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annemarie Horne</a> on <a href="https://unsplash.com/photos/CEGWHshlYxg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: rgb(1, 30, 33);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: rgb(21, 95, 126);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Services center */
+#services {
+    margin: 0px;
+    display: flex;
+
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 20px;
+    border-radius: 28px;
+    background-color: #f2f2f2;
+}
+
+#services .box img {
+    height: 150px;
+    margin: auto;
+    display: block;
+
+}
+
+#services.box {
+    font-family: 'Bree Serif', serif;
+    color: #dd1719;
+}
+
+
+
+#services .center {
+    color: #dd1719;
+
+}
+
+
+/* contact section  */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../photos/contactUs.jpg') no-repeat center center/cover;
+
+    /* Photo by <a href="https://unsplash.com/@julianhochgesang?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Julian Hochgesang</a> on <a href="https://unsplash.com/s/photos/contact-us?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+
+
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1rem;
+
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    color: #dd1719;
+
+}
+
+.massage {
+    width: 100px;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.message.success {
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+
+.message.danger {
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+
+@keyframes buttons {
+    0% {
+        transform: scale(0.1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer {
+    background: rgb(69, 66, 66);
+    color: rgb(207, 182, 182);
+    padding: 9px 20px;
+}
+
+
+/* utility Classes */
+.h-primary {
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+    color: #dd1719;
+}
+
+.h-secondary {
+    font-size: 2.2rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+    color: #dd1719;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px;
+    background-color: #dd1719;
+    /* color: white; */
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    color: white;
+    background-color: #dd1719;
+}
+
+.center {
+    text-align: center;
+}
